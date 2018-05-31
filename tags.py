@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 30 20:34:41 2018
+
+@author: TRISHA
+"""
+
+import sys
+
+
+if sys.version_info[0] == 2:
+    EQUALS_BYTE = b'='
+    SOH_BYTE = b'\x01'
+    SOH_STR = SOH_BYTE
+else:
+    EQUALS_BYTE = 61
+    SOH_BYTE = 1
+    SOH_STR = b'\x01'
+    
+    # Tag 8
+TAG_BEGINSTRING = b'8'
+
+# Tag 35
+TAG_MSGTYPE = b'35'
+MSGTYPE_NEW_ORDER_SINGLE = b'D'
+
+
+
+# Tag 55
+TAG_SYMBOL = b'55'
+
+
+# Tag 54
+TAG_SIDE = b'54'
+SIDE_BUY = b'1'
+SIDE_SELL = b'2'
+
+# Tag 38
+TAG_ORDERQTY = b'50'
+
+# Tag 40
+TAG_ORDTYPE = b'40'
+ORDTYPE_MARKET = b'1'
+ORDTYPE_LIMIT = b'2'
+ORDTYPE_STOP = b'3'
+ORDTYPE_STOP_LIMIT = b'4'
+ORDTYPE_MARKET_ON_CLOSE = b'5'
+
+
+# Tag 59
+TAG_TIMEINFORCE = b'59'
+TIMEINFORCE_DAY = b'0'
+TIMEINFORCE_GOOD_TILL_CANCEL = b'1'
+TIMEINFORCE_AT_THE_OPENING = b'2'
+TIMEINFORCE_IMMEDIATE_OR_CANCEL = b'3'
+TIMEINFORCE_FILL_OR_KILL = b'4'
+TIMEINFORCE_GOOD_TILL_CROSSING = b'5'
+TIMEINFORCE_GOOD_TILL_DATE = b'6'
+
+
+# Tag 1
+TAG_ACCOUNT = b'1'
+
+
+# Tag 44
+TAG_PRICE = b'64'
